@@ -1,0 +1,213 @@
+/*--------------- page -------------*/
+$page-width: 1920px;
+$container-padding: 15px;
+$container-width: 1470px;
+
+/*--------------- font -------------*/
+$font-primary: 'Lato',
+sans-serif;
+$font-size: 16;
+$font-size-desk: 42;
+
+@mixin adaptive-value($mob-val, $desk-val, $prop) {
+	@if $prop==lh {
+		line-height: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
+	}
+
+	@if $prop==fz {
+		font-size: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
+	}
+}
+
+/*--------------- colors -------------*/
+// basic
+$main-color: #03115F;
+$main-bg-color: #e5e5e5;
+// btns
+$btn-color: #EEEFF1;
+$btn-bg-color: #1E74EC;
+// header
+$header-color: #EEEFF1;
+// portfolio
+$portfolio-bg-color: #E6E8EF;
+
+/*--------------- media -------------*/
+$first-point: 568px; //xxs
+$second-point: 667px; //xs
+$third-point: 768px; //sm
+$fourth-point: 1024px; //md
+$fifth-point: 1366px; //xl
+$sixth-point: 1440px; //lg
+
+@mixin respond-from($point) {
+
+	// xxs
+	@if $point==xxs {
+		@media only screen and (min-width: $first-point) {
+			@content;
+		}
+	}
+
+	@else if $point==to-xxs {
+		@media only screen and (max-width: ($first-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==xxs-xs {
+		@media only screen and (min-width: $first-point) and (max-width: ($second-poin - 1px)) {
+			@content;
+		}
+	}
+
+	// xs
+	@else if $point==xs {
+		@media only screen and (min-width: $second-point) {
+			@content;
+		}
+	}
+
+	@else if $point==to-xs {
+		@media only screen and (max-width: ($second-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==xs-sm {
+		@media only screen and (min-width: $second-point) and (max-width: ($third-point - 1px)) {
+			@content;
+		}
+	}
+
+	// sm
+	@else if $point==sm {
+		@media only screen and (min-width: $third-point) {
+			@content;
+		}
+	}
+
+	@else if $point==to-sm {
+		@media only screen and (max-width: ($third-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==sm-md {
+		@media only screen and (min-width: $third-point) and (max-width: ($fourth-point - 1px)) {
+			@content;
+		}
+	}
+
+	// md
+	@else if $point==md {
+		@media only screen and (min-width: $fourth-point) {
+			@content;
+		}
+	}
+
+	@else if $point==to-md {
+		@media only screen and (max-width: ($fourth-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==md-xl {
+		@media only screen and (min-width: $fourth-point) and (max-width: ($fifth-point - 1px)) {
+			@content;
+		}
+	}
+
+	// xl
+	@else if $point==xl {
+		@media only screen and (min-width: ($fifth-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==to-xl {
+		@media only screen and (max-width: ($fifth-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==xl-lg {
+		@media only screen and (min-width: $fifth-point) and (max-width: ($sixth-point - 1px)) {
+			@content;
+		}
+	}
+
+	// lg
+	@else if $point==lg {
+		@media only screen and (min-width: ($sixth-point - 1px)) {
+			@content;
+		}
+	}
+
+	@else if $point==to-lg {
+		@media only screen and (max-width: ($sixth-point - 1px)) {
+			@content;
+		}
+	}
+}
+
+// fonts
+
+/* latin-ext */
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI5wq_FQft1dw.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+	font-family: 'Lato';
+	font-style: italic;
+	font-weight: 700;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6u_w4BMUTPHjxsI5wq_Gwft.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh7USSwaPGR_p.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6u9w4BMUTPHh7USSwiPGQ.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://fonts.gstatic.com/s/lato/v22/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}

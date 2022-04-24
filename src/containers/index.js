@@ -1,0 +1,9 @@
+export { default as Header } from './Header/Header';
+export { default as About } from './About/About';
+export { default as Advantages } from './Advantages/Advantages';
+export { default as ContactUs } from './ContactUs/ContactUs';
+export { default as Partners } from './Partners/Partners';
+export { default as Footer } from './Footer/Footer';
+export { default as Supply } from './Supply/Supply';
+export { default as Portfolio } from './Portfolio/Portfolio';
+export { default as Faq } from './Faq/Faq';
