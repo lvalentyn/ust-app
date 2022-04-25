@@ -2,6 +2,7 @@ import { useState } from 'react'
 
 import { images } from '../../constants'
 import './Navbar.scss'
+
 const { navLogo } = images
 
 const Navbar = () => {
@@ -48,6 +49,12 @@ const Navbar = () => {
 					</div>
 
 					<ul className={`navbar__menu`}>
+						<div className="navbar__wrapper">
+							<div className="navbar__search"></div>
+							<div className="navbar__sep"></div>
+							<div className="navbar__lang"></div>
+						</div>
+
 						{menuList.map((link, index) => (
 							<li className="navbar__el" key={link + index}><a className="navbar__link" href={`/${link}`}>{link}</a></li>
 						))}
