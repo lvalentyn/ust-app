@@ -10,6 +10,7 @@ import portfolioImg3 from '../assets/images/portfolio-img-3.jpg';
 import portfolioImg4 from '../assets/images/portfolio-img-4.jpg';
 import portfolioImg5 from '../assets/images/portfolio-img-5.jpg';
 import portfolioImg6 from '../assets/images/portfolio-img-6.jpg';
+import navLogo from '../assets/images/navLogo.png';
 
 
-export default { aboutImgMob, aboutImg, contactusBgMob, contactusBg, headerBgMob, headerBg, portfolioImg1, portfolioImg2, portfolioImg3, portfolioImg4, portfolioImg5, portfolioImg6 }
+export default { navLogo, aboutImgMob, aboutImg, contactusBgMob, contactusBg, headerBgMob, headerBg, portfolioImg1, portfolioImg2, portfolioImg3, portfolioImg4, portfolioImg5, portfolioImg6 }

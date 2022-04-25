@@ -1,63 +1,72 @@
 @import './assets/common/vars.scss';
 
 html {
-  font-size: 10px;
-  line-height: 1.5em;
+	font-size: 10px;
+	line-height: 1.5em;
 }
 
 body {
-  margin: 0;
-  font-family: $font-primary;
-  color: $main-color;
-  background-color: $main-bg-color;
+	margin: 0;
+	font-family: $font-primary;
+	color: $main-color;
+	background-color: $main-bg-color;
 }
 
 .page {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .container {
-  width: 100%;
-  max-width: $container-width;
-  padding: 0 $container-padding;
-  margin: 0 auto;
+	width: 100%;
+	max-width: $container-width;
+	padding: 0 $container-padding;
+	margin: 0 auto;
 }
 
 .no-scroll {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	color: $main-color;
+	text-decoration: none;
 }
 
 .btn {
-  display: inline-block;
-  text-align: center;
+	display: inline-block;
+	text-align: center;
 
-  width: 100%;
-  padding: 15px 0px;
+	width: 100%;
+	padding: 15px 0px;
 
-  font-size: 16px;
-  font-weight: 900;
-  color: inherit;
-  text-decoration: none;
-  text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 900;
+	color: $btn-color;
+	text-decoration: none;
+	text-transform: uppercase;
 
-  background: $btn-bg-color;
+	background: $btn-bg-color;
+}
+
+.p-nav {
+	padding-top: 70px;
 }
 
 @include respond-from(md) {
-  .none-md {
-    display: none !important;
-  }
+	.none-md {
+		display: none !important;
+	}
 }
 
 @include respond-from(to-md) {
-  .none-to-md {
-    display: none !important;
-  }
+	.none-to-md {
+		display: none !important;
+	}
 }

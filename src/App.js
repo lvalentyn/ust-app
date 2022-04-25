@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="page">
       <Navbar />
-      <Header />
+      <div className="container p-nav">
+        <Header />
+      </div>
       <About />
       <Supply />
       <Portfolio />
