@@ -5,7 +5,10 @@
 	display: flex;
 	align-items: center;
 
-	padding: 150px 0 80px;
+	.container {
+		padding-top: 150px;
+		padding-bottom: 80px;
+	}
 
 	&__bg {
 		position: absolute;
@@ -37,7 +40,7 @@
 		color: $header-color;
 	}
 
-	@include respond-from(xxs) {
+	@include resolution(xxs) {
 
 		&__title {
 			width: 500px;
@@ -48,8 +51,11 @@
 		}
 	}
 
-	@include respond-from(md) {
-		padding: 200px 0 100px;
+	@include resolution(md) {
+		.container {
+			padding-top: 200px;
+			padding-bottom: 100px;
+		}
 
 		&__title {
 			margin-bottom: 25px;
@@ -68,8 +74,11 @@
 		}
 	}
 
-	@include respond-from(lg) {
-		padding: 250px 0 410px;
+	@include resolution(lg) {
+		.container {
+			padding-top: 250px;
+			padding-bottom: 410px;
+		}
 
 		&__title {
 			margin-bottom: 25px;

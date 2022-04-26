@@ -8,7 +8,7 @@ const Header = () => {
 		<section className='header'>
 			<div className="header__bg">
 				<picture>
-					<source srcset={headerBg} media="(min-width: 678px)" />
+					<source srcSet={headerBg} media="(min-width: 678px)" />
 					<img src={headerBgMob} alt="header bg" />
 				</picture>
 			</div>

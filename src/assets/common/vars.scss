@@ -44,7 +44,7 @@ $fourth-point: 1024px; //md
 $fifth-point: 1366px; //xl
 $sixth-point: 1440px; //lg
 
-@mixin respond-from($point) {
+@mixin resolution($point) {
 
 	// xxs
 	@if $point==xxs {

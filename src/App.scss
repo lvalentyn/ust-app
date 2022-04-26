@@ -39,6 +39,27 @@ a {
 	text-decoration: none;
 }
 
+.h2 {
+	margin-bottom: 10px;
+
+	font-size: 2rem;
+	line-height: 2.4rem;
+	font-weight: 300;
+}
+
+.h3 {
+	margin-bottom: 15px;
+
+	font-size: 3rem;
+	line-height: 3.2rem;
+	font-weight: 700;
+}
+
+.h2,
+.h3 {
+	color: $main-color;
+}
+
 img {
 	width: 100%;
 	height: 100%;
@@ -58,17 +79,61 @@ img {
 	color: $btn-color;
 	border-radius: 8px;
 
+	border: 2px solid $btn-bg-color;
 	background: $btn-bg-color;
+
+	transition: .3s ease;
+
+	&:hover {
+		color: $btn-bg-color;
+		background: transparent;
+	}
+
+	&--alt {
+		color: $btn-bg-color;
+		background: transparent;
+
+		&:hover {
+			color: $btn-color;
+			background: $btn-bg-color;
+		}
+	}
 }
 
-@include respond-from(xxs) {
+.p-t {
+	padding-top: 80px;
+}
+
+@include resolution(xxs) {
 	.btn {
 		font-size: 1.6rem;
 		max-width: 206px;
 	}
 }
 
-@include respond-from(md) {
+@include resolution(to-md) {
+	.none-to-md {
+		display: none !important;
+	}
+}
+
+@include resolution(md) {
+	.h2 {
+		margin-bottom: 25px;
+
+		font-size: 2.3rem;
+		line-height: 3rem;
+		font-weight: 400;
+	}
+
+	.h3 {
+		margin-bottom: 25px;
+
+		font-size: 4.5rem;
+		line-height: 5rem;
+	}
+
+
 	.none-md {
 		display: none !important;
 	}
@@ -76,10 +141,26 @@ img {
 	.btn {
 		border-radius: 0px;
 	}
+
+	.p-t {
+		padding-top: 120px;
+	}
 }
 
-@include respond-from(to-md) {
-	.none-to-md {
-		display: none !important;
+
+
+@include resolution(lg) {
+	.h2 {
+		font-size: 2.6rem;
+		line-height: 3.2rem;
+	}
+
+	.h3 {
+		font-size: 6.2rem;
+		line-height: 6.8rem;
+	}
+
+	.p-t {
+		padding-top: 180px;
 	}
 }

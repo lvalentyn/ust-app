@@ -7,14 +7,17 @@ function App() {
     <div className="page">
       <Navbar />
       <Header />
-      <About />
-      <Supply />
-      <Portfolio />
-      <Advantages />
-      <Partners />
-      <ContactUs />
-      <Faq />
-      <Footer />
+      <div className="container p-t">
+        <h2 className="h2">О нас</h2>
+        <About />
+      </div>
+      <div className="container p-t"><Supply /></div>
+      <div className="container p-t"><Portfolio /></div>
+      <div className="container p-t"><Advantages /></div>
+      <div className="container p-t"> <Partners /></div>
+      <div className="container p-t"><ContactUs /></div>
+      <div className="container p-t"><Faq /></div>
+      <div className="container p-t"><Footer /></div>
     </div>
   );
 }

@@ -1,1 +1,77 @@
 @import './../../assets/common/vars.scss';
+
+.about {
+
+	&__descr {
+		margin-bottom: 20px;
+
+		p {
+			margin-top: 10px;
+		}
+	}
+
+	&__btn-box {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -10px;
+	}
+
+	&__btn {
+		margin: 10px;
+	}
+
+	@include resolution(to-xxs) {
+		&__img {
+			width: calc(100% + 30px);
+			margin-left: -15px;
+		}
+	}
+
+	@include resolution(to-xs) {
+		&__img {
+			margin-bottom: 20px;
+		}
+	}
+
+	@include resolution(xs) {
+		display: flex;
+
+		&__img {
+			flex: 0 0 auto;
+			position: relative;
+
+			margin-right: 20px;
+			width: 40%;
+
+			img {
+				position: absolute;
+				top: 0;
+				left: 0;
+
+			}
+		}
+
+		&__descr {
+			margin-bottom: 30px;
+		}
+	}
+
+	@include resolution(md) {
+		&__img {
+			margin-right: 40px;
+		}
+
+		&__descr {
+			margin-bottom: 40px;
+
+			font-size: 1.8rem;
+			line-height: 2.2rem;
+		}
+	}
+
+	@include resolution(lg) {
+		&__img {
+			width: 65%;
+		}
+	}
+}

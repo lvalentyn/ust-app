@@ -146,7 +146,7 @@
 
 	&.sticky {
 		background: rgba(0, 0, 0, .4);
-		padding: .5rem 2rem;
+		padding: .5rem 0rem;
 		border-bottom: 1px solid #f8f8f8;
 	}
 
@@ -162,13 +162,13 @@
 		z-index: -1;
 	}
 
-	@include respond-from(sm) {
+	@include resolution(sm) {
 		&__menu {
 			width: 50%;
 		}
 	}
 
-	@include respond-from(to-md) {
+	@include resolution(to-md) {
 		&.active {
 			.blur {
 				visibility: visible;
@@ -210,7 +210,7 @@
 		}
 	}
 
-	@include respond-from(md) {
+	@include resolution(md) {
 		&__burger {
 			display: none;
 		}
@@ -255,7 +255,7 @@
 		}
 	}
 
-	@include respond-from(lg) {
+	@include resolution(lg) {
 		&__container {
 			height: 100px;
 		}
