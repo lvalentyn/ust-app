@@ -9,7 +9,6 @@ function App() {
       <Header />
       <HeaderInfo />
       <div className="container p-t">
-
         <About />
       </div>
 
@@ -19,7 +18,16 @@ function App() {
         <p className="subtitle">Мы можем разработать для вас любое индивидуальное решение. Наша компания обладает широкими возможностями для успешного создания технически-сложных систем.</p>
         <Supply />
       </div>
-      <div className="container p-t"><Portfolio /></div>
+      <div className="p-t">
+        <div className="title-bg">
+          <h2 className="h2">Портфолио</h2>
+          <h3 className="h3">Завершенные проекты</h3>
+          <p className="subtitle">Мы специализируемся на предоставлении программного обеспечения высшего качества и предоставлении высококвалифицированных команд с опытом в области разработки блокчейнов, аналитики больших данных и AI/ML, а также услуг по разработке программного обеспечения на заказ.</p>
+        </div>
+        <div className="container">
+          <Portfolio />
+        </div>
+      </div>
       <div className="container p-t"><Advantages /></div>
       <div className="container p-t"> <Partners /></div>
       <div className="container p-t"><ContactUs /></div>

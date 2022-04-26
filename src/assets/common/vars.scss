@@ -22,7 +22,8 @@ $font-size-desk: 42;
 /*--------------- colors -------------*/
 // basic
 $main-color: #03115F;
-$main-bg-color: #e5e5e5;
+$main-bg-color: #fff;
+$title-bg: #E6E8EF;
 // btns
 $btn-color: #EEEFF1;
 $btn-bg-color: #1E74EC;
@@ -39,9 +40,10 @@ $header-info-bg:#03115F;
 // supply
 $supply-color:#002984;
 $supply-color-alt:#75788D;
-
 // portfolio
-$portfolio-bg-color: #E6E8EF;
+$portfolio-color: #35417F;
+$portfolio-color-alt: #75788D;
+
 
 /*--------------- media -------------*/
 $first-point: 568px; //xxs

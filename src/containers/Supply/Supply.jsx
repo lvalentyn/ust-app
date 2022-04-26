@@ -20,7 +20,6 @@ const Supply = () => {
 						<p className="supply__descr">{item.descr}</p>
 					</div>
 				))}
-
 			</div>
 		</div>
 	)

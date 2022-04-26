@@ -11,6 +11,11 @@
 		margin: 10px;
 	}
 
+	.h3,
+	.subtitle {
+		max-width: 100% !important;
+	}
+
 	@include resolution(to-xxs) {
 		&__img {
 			width: calc(100% + 30px);
@@ -20,7 +25,9 @@
 
 	@include resolution(to-xs) {
 		&__img {
+			position: relative;
 			margin-bottom: 20px;
+			height: 252px;
 		}
 	}
 

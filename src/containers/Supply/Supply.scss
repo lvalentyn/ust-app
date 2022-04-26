@@ -1,6 +1,7 @@
 @import './../../assets/common/vars.scss';
 
 .supply {
+	overflow: hidden;
 
 	&__box {
 		display: flex;
