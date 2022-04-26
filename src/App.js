@@ -1,12 +1,13 @@
 import './App.scss';
 import { About, Header, Advantages, ContactUs, Faq, Footer, Partners, Portfolio, Supply } from './containers';
-import { Navbar } from './components'
+import { Navbar, HeaderInfo } from './components'
 
 function App() {
   return (
     <div className="page">
       <Navbar />
       <Header />
+      <HeaderInfo />
       <div className="container p-t">
         <h2 className="h2">О нас</h2>
         <About />
