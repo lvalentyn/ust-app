@@ -28,7 +28,12 @@ function App() {
           <Portfolio />
         </div>
       </div>
-      <div className="container p-t"><Advantages /></div>
+      <div className="container p-t">
+        <h2 className="h2">Наши</h2>
+        <h3 className="h3">Преимущества</h3>
+        <p className="subtitle">Основная ценность нашей компании - создание качественного продукта и удовлетворение потребностей клиента. Поэтому перед началом разработки мы проводим маркетинговые исследования и помогаем клиенту определить стратегию развития продукта.</p>
+        <Advantages />
+      </div>
       <div className="container p-t"> <Partners /></div>
       <div className="container p-t"><ContactUs /></div>
       <div className="container p-t"><Faq /></div>
