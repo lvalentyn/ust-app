@@ -1,13 +1,14 @@
 @import './../../assets/common/vars.scss';
 
 .header-info {
-
+	z-index: 2;
 
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
 
 		padding: 40px 0;
+
 	}
 
 	&__card {

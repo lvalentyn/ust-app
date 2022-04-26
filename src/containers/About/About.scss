@@ -1,15 +1,6 @@
 @import './../../assets/common/vars.scss';
 
 .about {
-
-	&__descr {
-		margin-bottom: 20px;
-
-		p {
-			margin-top: 10px;
-		}
-	}
-
 	&__btn-box {
 		display: flex;
 		flex-wrap: wrap;
@@ -50,22 +41,11 @@
 
 			}
 		}
-
-		&__descr {
-			margin-bottom: 30px;
-		}
 	}
 
 	@include resolution(md) {
 		&__img {
 			margin-right: 40px;
-		}
-
-		&__descr {
-			margin-bottom: 40px;
-
-			font-size: 1.8rem;
-			line-height: 2.2rem;
 		}
 	}
 

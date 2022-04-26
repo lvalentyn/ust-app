@@ -9,10 +9,16 @@ function App() {
       <Header />
       <HeaderInfo />
       <div className="container p-t">
-        <h2 className="h2">О нас</h2>
+
         <About />
       </div>
-      <div className="container p-t"><Supply /></div>
+
+      <div className="container p-t">
+        <h2 className="h2">Наши предложения</h2>
+        <h3 className="h3">Разработка полного цикла</h3>
+        <p className="subtitle">Мы можем разработать для вас любое индивидуальное решение. Наша компания обладает широкими возможностями для успешного создания технически-сложных систем.</p>
+        <Supply />
+      </div>
       <div className="container p-t"><Portfolio /></div>
       <div className="container p-t"><Advantages /></div>
       <div className="container p-t"> <Partners /></div>
