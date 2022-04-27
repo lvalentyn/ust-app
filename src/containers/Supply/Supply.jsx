@@ -14,7 +14,7 @@ const Supply = () => {
 		<div className="supply">
 			<div className="supply__box">
 				{cards.map((item, i) => (
-					<div className="supply__card" key={item + i}>
+					<div className="supply__card t-center-to-md" key={item + i}>
 						<div className={`supply__logo supply__logo--${item.logo}`} />
 						<p className="supply__title">{item.title}</p>
 						<p className="supply__descr">{item.descr}</p>

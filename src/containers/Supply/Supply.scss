@@ -4,20 +4,10 @@
 	overflow: hidden;
 
 	&__box {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		margin-bottom: -20px;
-		margin-right: -10px;
-	}
-
-	&__card {
-		margin-right: 10px;
-		margin-bottom: 20px;
-
-		max-width: 215px;
-		text-align: center;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		@include adaptive-value(grid-gap, 20, 60);
+		justify-items: center;
 	}
 
 	&__logo {
@@ -55,61 +45,30 @@
 	}
 
 	&__title {
+		@include adaptive-value(font-size, 20, 26);
+		@include adaptive-value(line-height, 24, 30);
+
 		margin-bottom: 15px;
-		font-size: 2rem;
+
 		color: $supply-color;
 	}
 
 	&__descr {
-		font-size: 1.2rem;
-		line-height: 1.6rem;
+		@include adaptive-value(font-size, 12, 18);
+		@include adaptive-value(line-height, 16, 22);
+
 		color: $supply-color-alt;
-	}
-
-	@include resolution(xxs) {
-		&__box {
-			margin-right: -40px;
-		}
-
-		&__card {
-			margin-right: 40px;
-		}
 	}
 
 	@include resolution(sm) {
 		&__box {
-			justify-content: space-between;
-		}
-
-		&__card {
-			max-width: 100%;
-			width: calc(100% / 3 - 40px);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
 	@include resolution(md) {
-		&__box {
-			margin-right: -60px;
-			margin-bottom: -60px;
-		}
-
-		&__card {
-			width: calc(100% / 3 - 60px);
-			margin-bottom: 60px;
-			text-align: left;
-		}
-
 		&__logo {
 			margin: 0 0 30px;
-		}
-
-		&__title {
-			font-size: 2.6rem;
-		}
-
-		&__descr {
-			font-size: 1.8rem;
-			line-height: 2.2rem;
 		}
 	}
 }

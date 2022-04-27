@@ -1,5 +1,5 @@
 /*--------------- page -------------*/
-$page-width: 1920px;
+$page-width: 1920;
 $container-padding: 15px;
 $container-width: 1470px;
 
@@ -9,14 +9,8 @@ sans-serif;
 $font-size: 16;
 $font-size-desk: 42;
 
-@mixin adaptive-value($mob-val, $desk-val, $prop) {
-	@if $prop==lh {
-		line-height: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
-	}
-
-	@if $prop==fz {
-		font-size: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
-	}
+@mixin adaptive-value($prop, $mob-val, $desk-val) {
+	#{$prop}: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
 }
 
 /*--------------- colors -------------*/

@@ -1,21 +1,16 @@
 @import './../../assets/common/vars.scss';
 
 .portfolio {
-	margin-top: -150px;
+	@include adaptive-value(margin-top, -150, -250);
 	overflow: hidden;
 
 	&__col {
-		margin-top: -20px;
-		margin-bottom: 40px;
+		display: grid;
+		@include adaptive-value(grid-gap, 20, 30);
 
-		&:last-child {
-			margin-bottom: 0;
+		&:first-child {
+			margin-bottom: 20px;
 		}
-	}
-
-	&__card {
-		margin-top: 20px;
-		text-align: center;
 	}
 
 	&__img {
@@ -28,15 +23,17 @@
 	&__title {
 		margin-bottom: 10px;
 
+		@include adaptive-value(font-size, 18, 22);
+		@include adaptive-value(line-height, 22, 32);
+
 		font-weight: 600;
-		font-size: 1.8rem;
-		line-height: 2.2rem;
 		color: $portfolio-color;
 	}
 
 	&__descr {
-		font-size: 1.2rem;
-		line-height: 1.6rem;
+		@include adaptive-value(font-size, 12, 18);
+		@include adaptive-value(line-height, 16, 22);
+
 		color: $portfolio-color-alt;
 	}
 
@@ -44,34 +41,22 @@
 		text-align: center;
 		margin-top: 20px;
 		margin-right: -15px;
+		margin-bottom: -15px;
 	}
 
 	&__btn {
 		margin-right: 15px;
-
-		&:first-child {
-			margin-bottom: 15px;
-		}
+		margin-bottom: 15px;
 	}
 
 	@include resolution(xxs) {
 		&__col {
-			display: flex;
-			flex-wrap: wrap;
+			grid-template-columns: 1fr 1fr;
 		}
 
 		&__card {
-
-			&:first-child {
-				margin-right: 20px;
-			}
-
-			&:not(:last-child) {
-				width: calc(50% - 10px);
-			}
-
 			&:last-child {
-				width: 100%;
+				grid-column: 1 / 3;
 
 				.portfolio__img {
 					max-height: 360px;
@@ -85,18 +70,17 @@
 	}
 
 	@include resolution(md) {
-		margin-top: -200px;
-
 		&__box {
 			display: flex;
 		}
 
 		&__col {
-			width: calc(50% - 10px);
-			margin-bottom: 0;
+			width: 100%;
+			margin: 0;
 
 			&:first-child {
-				margin-right: 20px;
+				margin-bottom: 0;
+				margin-right: 30px;
 			}
 		}
 
@@ -107,49 +91,6 @@
 
 		&__btn {
 			margin-right: 25px;
-		}
-	}
-
-	@include resolution(lg) {
-		margin-top: -250px;
-
-		&__col {
-			margin-top: 0;
-			width: calc(50% - 20px);
-
-			&:first-child {
-				margin-right: 40px;
-			}
-		}
-
-		&__card {
-			margin-top: 0;
-
-			&:first-child {
-				margin-right: 40px;
-			}
-
-			&:not(:last-child) {
-				width: calc(50% - 20px);
-			}
-
-			&:last-child {
-				margin-top: 40px;
-			}
-		}
-
-		&__card {
-			text-align: left;
-		}
-
-		&__title {
-			font-size: 2.2rem;
-			line-height: 3.2rem;
-		}
-
-		&__descr {
-			font-size: 1.8rem;
-			line-height: 2.2rem;
 		}
 	}
 }

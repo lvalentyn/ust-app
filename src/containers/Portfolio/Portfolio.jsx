@@ -20,7 +20,7 @@ const Portfolio = () => {
 			<div className="portfolio__box">
 				<div className="portfolio__col">
 					{cards1.map((item, i) => (
-						<div className="portfolio__card" key={item + i}>
+						<div className="portfolio__card t-center-to-md" key={item + i}>
 							<div className={`portfolio__img`}>
 								<img src={item.img} alt={item.title} />
 							</div>
@@ -31,7 +31,7 @@ const Portfolio = () => {
 				</div>
 				<div className="portfolio__col">
 					{cards2.map((item, i) => (
-						<div className="portfolio__card" key={item + i}>
+						<div className="portfolio__card t-center-to-md" key={item + i}>
 							<div className={`portfolio__img`}>
 								<img src={item.img} alt={item.title} />
 							</div>

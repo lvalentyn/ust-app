@@ -4,14 +4,9 @@
 	overflow: hidden;
 
 	&__box {
-		display: flex;
-		justify-content: center;
-		flex-direction: column;
-		margin: -20px;
-	}
-
-	&__card {
-		margin: 20px;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+		@include adaptive-value(grid-gap, 20, 60);
 	}
 
 	&__logo {
@@ -41,41 +36,23 @@
 
 	&__title {
 		margin-bottom: 10px;
-		font-size: 1.8rem;
-		line-height: 2.2rem;
+
+		@include adaptive-value(font-size, 18, 22);
+		@include adaptive-value(line-height, 22, 32);
+
 		color: $advantages-color;
 	}
 
 	&__descr {
-		font-size: 1.2rem;
-		line-height: 1.6rem;
+		@include adaptive-value(font-size, 12, 18);
+		@include adaptive-value(line-height, 16, 22);
+
 		color: $advantages-color-alt;
 	}
 
-	@include resolution(xxs) {
+	@include resolution(md) {
 		&__box {
-			flex-direction: row;
-		}
-
-		&__card {
-			width: calc(50% - 40px);
-		}
-	}
-
-	@include resolution(lg) {
-		&__card {
-			width: calc(100% / 4 - 40px);
-		}
-
-
-		&__title {
-			font-size: 2.2rem;
-			line-height: 3.2rem;
-		}
-
-		&__descr {
-			font-size: 1.8rem;
-			line-height: 2.2rem;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 }
