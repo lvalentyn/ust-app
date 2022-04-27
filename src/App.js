@@ -57,7 +57,11 @@ function App() {
 					<ContactUs />
 				</div>
 			</div>
-			<div className="container p-t"><Faq /></div>
+			<div className="container p-t">
+				<h2 className="h2">FAQ</h2>
+				<h3 className="h3">Возможно, у вас остались вопросы. Отвечаем</h3>
+				<Faq />
+			</div>
 			<div className="container p-t"><Footer /></div>
 		</div>
 	);

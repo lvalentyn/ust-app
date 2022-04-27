@@ -1,1 +1,85 @@
 @import './../../assets/common/vars.scss';
+
+.faq {
+	&__item {
+		margin-bottom: 15px;
+		border-bottom: 2px solid $faq-bd;
+		cursor: pointer;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&.open {
+			.faq__icon {
+				transform: rotate(45deg);
+			}
+
+			.faq__wrap {
+				height: auto;
+				max-height: 1000px;
+				transition: all .5s cubic-bezier(1, 0, 1, 0);
+			}
+		}
+
+	}
+
+	&__title-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		margin-bottom: 15px;
+	}
+
+	&__title {
+		@include adaptive-value(font-size, 18, 26);
+		@include adaptive-value(line-height, 22, 32);
+		color: $faq-title;
+	}
+
+	&__icon {
+		flex: 0 0 auto;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		width: 24px;
+		height: 24px;
+
+		transition: all .3s ease;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+
+			width: 80%;
+			height: 2px;
+
+			border-radius: 10px;
+			background-color: $faq-icon;
+		}
+
+		&::before {
+			width: 2px;
+			height: 80%;
+		}
+	}
+
+	&__wrap {
+		overflow: hidden;
+		max-height: 0;
+		transition: all .5s cubic-bezier(0, 1, 0, 1);
+	}
+
+	&__text {
+		padding: 10px 5% 20px;
+
+		@include adaptive-value(font-size, 12, 18);
+		@include adaptive-value(line-height, 16, 22);
+
+		color: $faq-text;
+	}
+}
