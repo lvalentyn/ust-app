@@ -1,1 +1,74 @@
 @import './../../assets/common/vars.scss';
+
+.contact-us-info {
+
+	&,
+	&__link {
+		color: $contactus-us-bg;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+
+		@include adaptive-value(font-size, 12, 16);
+		@include adaptive-value(line-height, 16, 22);
+	}
+
+	&__row {
+		position: relative;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		padding: 20px 0;
+		margin-bottom: 20px;
+
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			width: 100%;
+			height: 2px;
+			border-radius: 20px;
+
+			background: $contactus-us-bd;
+			opacity: .2;
+		}
+
+		&::after {
+			top: unset;
+			bottom: 0;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 10px;
+
+		@include adaptive-value(font-size, 12, 16);
+		@include adaptive-value(line-height, 14, 24);
+		font-weight: 700;
+	}
+
+	&__link {
+		margin-bottom: 5px;
+
+		@include adaptive-value(font-size, 11, 16);
+		@include adaptive-value(line-height, 14, 20);
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

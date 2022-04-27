@@ -40,13 +40,21 @@ a {
 	@include adaptive-value(padding-bottom, 170, 280);
 
 	background: $title-bg;
+
+	position: relative;
+	z-index: -1;
 }
 
 .h2,
-.h3 {
+.h3,
+.h4 {
 	@include adaptive-value(margin-bottom, 10, 25);
 
 	color: $main-color;
+
+	&--alt {
+		color: $title-color;
+	}
 }
 
 .h2 {
@@ -59,6 +67,13 @@ a {
 .h3 {
 	@include adaptive-value(font-size, 30, 62);
 	@include adaptive-value(line-height, 32, 68);
+
+	font-weight: 700;
+}
+
+.h4 {
+	@include adaptive-value(font-size, 18, 36);
+	@include adaptive-value(line-height, 22, 42);
 
 	font-weight: 700;
 }
@@ -81,6 +96,8 @@ img {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+
+	z-index: -1;
 }
 
 .btn {
@@ -99,22 +116,32 @@ img {
 	border: 2px solid $btn-bg-color;
 	background: $btn-bg-color;
 
+	cursor: pointer;
 	transition: .3s ease;
 
 	&:hover {
 		color: $btn-bg-color;
-		background: transparent;
+		background: $btn-bg-color-alt;
 	}
 
 	&--alt {
 		color: $btn-bg-color;
-		background: transparent;
+		background: $btn-bg-color-alt;
 
 		&:hover {
 			color: $btn-color;
 			background: $btn-bg-color;
 		}
 	}
+}
+
+.m-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.t-center {
+	text-align: center;
 }
 
 .no-scroll {
@@ -160,13 +187,13 @@ img {
 		max-width: 70%;
 	}
 
-	.title-bg {
+	.t-center-md {
 		text-align: center;
+	}
 
-		&>* {
-			margin-left: auto;
-			margin-right: auto;
-		}
+	.m-center-md {
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.none-md {

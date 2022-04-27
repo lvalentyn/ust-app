@@ -1,1 +1,50 @@
 @import './../../assets/common/vars.scss';
+
+.contact-us {
+	@include adaptive-value(margin-top, -120, -250);
+	overflow: hidden;
+
+	&__box {
+		background: $contactus-us-bg;
+	}
+
+	&__col {
+
+		&--bg {
+			background: $contactus-us-bg-alt;
+
+			.h4 {
+				color: $contactus-us-bg;
+			}
+		}
+	}
+
+	@include resolution(to-sm) {
+		width: calc(100% + 30px);
+		margin-left: -15px;
+
+		&__col {
+			padding: 40px 15px;
+		}
+	}
+
+	@include resolution(sm) {
+		&__box {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: space-between;
+			align-items: flex-start;
+			@include adaptive-value(gap, 20, 160);
+			@include adaptive-value(padding, 20, 100);
+		}
+
+		&__col {
+			width: 50%;
+
+			&--bg {
+				@include adaptive-value(padding, 20, 40);
+				// @include adaptive-value(margin-right, 20, 160);
+			}
+		}
+	}
+}

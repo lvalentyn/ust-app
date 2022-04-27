@@ -1,1 +1,74 @@
 @import './../../assets/common/vars.scss';
+
+.contact-us-form {
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__title {
+		margin-bottom: 15px;
+
+		@include adaptive-value(font-size, 12, 18);
+		@include adaptive-value(line-height, 16, 22);
+
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 15px;
+	}
+
+	&__input,
+	&__textarea {
+		padding: 10px 15px;
+		border: none;
+		border-radius: 4px;
+
+
+		font-family: $font-primary;
+
+		&::placeholder {
+			color: $contactus-us-input-color;
+		}
+	}
+
+	&__textarea {
+		height: 100px;
+	}
+
+	&__terms {
+		margin-bottom: 20px;
+		padding: 15px;
+
+		background: $contactus-us-form-bg;
+		border-radius: 4px;
+	}
+
+	&__link {
+		color: $contactus-us-term-color;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@include resolution(md) {
+		&__btn-box {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+			align-items: flex-start;
+		}
+
+		&__btn {
+			margin-right: 20px;
+		}
+
+		&__terms {
+			margin: 0;
+		}
+	}
+}
