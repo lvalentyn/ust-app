@@ -1,3 +1,4 @@
+import CountUp from 'react-countup'
 import './HeaderInfo.scss'
 
 const HeaderInfo = () => {
@@ -15,7 +16,7 @@ const HeaderInfo = () => {
 				<div className="header-info__wrapper">
 					{cards.map((item, i) => (
 						<div className="header-info__card" key={item + i}>
-							<p className='header-info__value'>{item.value}</p>
+							<CountUp className='header-info__value' end={item.value} duration={1} suffix='+' />
 							<p className='header-info__descr'>{item.descr}</p>
 						</div>
 					))}

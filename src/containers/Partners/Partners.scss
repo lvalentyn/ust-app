@@ -1,1 +1,21 @@
 @import './../../assets/common/vars.scss';
+
+.partners {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	@include adaptive-value(grid-gap, 10, 60);
+
+	&__img {
+		position: relative;
+		width: 100%;
+		padding: 0 0 110px;
+
+		img {
+			width: 60%;
+			height: auto;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+}
