@@ -159,13 +159,13 @@
 		z-index: -1;
 	}
 
-	@include resolution(sm) {
+	@include minW($sm) {
 		&__menu {
 			width: 50%;
 		}
 	}
 
-	@include resolution(to-md) {
+	@include maxW($md) {
 		&.active {
 			.blur {
 				visibility: visible;
@@ -207,7 +207,7 @@
 		}
 	}
 
-	@include resolution(md) {
+	@include minW($md) {
 		&__burger {
 			display: none;
 		}
@@ -252,7 +252,7 @@
 		}
 	}
 
-	@include resolution(lg) {
+	@include minW($lg) {
 		&__container {
 			height: 100px;
 		}

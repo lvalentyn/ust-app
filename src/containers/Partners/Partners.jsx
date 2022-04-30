@@ -1,8 +1,4 @@
-import { images } from '../../constants'
-
 import './Partners.scss'
-
-const { partnerLogo1, partnerLogo2, partnerLogo3, partnerLogo4 } = images
 
 const Partners = () => {
 	const partners = ['cinzano', 'atol', 'cinzano', 'atol', 'cinzano', 'atol']

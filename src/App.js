@@ -62,7 +62,7 @@ function App() {
 				<h3 className="h3">Возможно, у вас остались вопросы. Отвечаем</h3>
 				<Faq />
 			</div>
-			<div className="container p-t"><Footer /></div>
+			<div className="p-t"><Footer /></div>
 		</div>
 	);
 }

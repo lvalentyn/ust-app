@@ -1,0 +1,17 @@
+// adaptive value
+@mixin adaptive-value($prop, $mob-val, $desk-val) {
+	#{$prop}: calc(#{$mob-val + px} + (#{$desk-val} - #{$mob-val}) * ((100vw - 320px) / (#{$page-width} - 320)));
+}
+
+// media
+@mixin minW($val) {
+	@media screen and (min-width: $val) {
+		@content;
+	}
+}
+
+@mixin maxW($val) {
+	@media only screen and (max-width: ($val - 1px)) {
+		@content;
+	}
+}

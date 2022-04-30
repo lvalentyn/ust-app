@@ -16,14 +16,14 @@
 		max-width: 100% !important;
 	}
 
-	@include resolution(to-xxs) {
+	@include maxW($xxs) {
 		&__img {
 			width: calc(100% + 30px);
 			margin-left: -15px;
 		}
 	}
 
-	@include resolution(to-xs) {
+	@include maxW($xs) {
 		&__img {
 			position: relative;
 			margin-bottom: 20px;
@@ -31,7 +31,7 @@
 		}
 	}
 
-	@include resolution(xs) {
+	@include minW($xs) {
 		display: flex;
 
 		&__img {
@@ -50,13 +50,13 @@
 		}
 	}
 
-	@include resolution(md) {
+	@include minW($md) {
 		&__img {
 			margin-right: 40px;
 		}
 	}
 
-	@include resolution(lg) {
+	@include minW($lg) {
 		&__img {
 			width: 65%;
 		}

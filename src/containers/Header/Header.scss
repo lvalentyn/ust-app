@@ -37,12 +37,14 @@
 
 	&__subtitle {
 		margin-bottom: 40px;
-		font-size: 1.2rem;
-		line-height: 1.6rem;
+
+		@include adaptive-value(font-size, 12, 20);
+		@include adaptive-value(line-height, 16, 28);
+
 		color: $header-color;
 	}
 
-	@include resolution(xxs) {
+	@include minW($xxs) {
 
 		&__title {
 			width: 500px;
@@ -53,7 +55,7 @@
 		}
 	}
 
-	@include resolution(md) {
+	@include minW($md) {
 		.container {
 			padding-top: 200px;
 			padding-bottom: 100px;
@@ -68,12 +70,10 @@
 			margin-bottom: 50px;
 			width: 500px;
 
-			font-size: 1.6rem;
-			line-height: 2rem;
 		}
 	}
 
-	@include resolution(lg) {
+	@include minW($lg) {
 		.container {
 			padding-top: 250px;
 			padding-bottom: 410px;
@@ -86,8 +86,6 @@
 
 		&__subtitle {
 			margin-bottom: 60px;
-			font-size: 2rem;
-			line-height: 2.8rem;
 		}
 	}
 }

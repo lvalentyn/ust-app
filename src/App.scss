@@ -1,3 +1,4 @@
+@import './assets/common/grid.scss';
 @import './assets/common/vars.scss';
 
 html {
@@ -152,14 +153,14 @@ img {
 	@include adaptive-value(padding-top, 80, 180);
 }
 
-@include resolution(xxs) {
+@include minW($xxs) {
 	.btn {
 		font-size: 1.6rem;
 		max-width: 206px;
 	}
 }
 
-@include resolution(to-md) {
+@include maxW($md) {
 
 	.h3,
 	.subtitle {
@@ -180,7 +181,7 @@ img {
 	}
 }
 
-@include resolution(md) {
+@include minW($md) {
 
 	.h3,
 	.subtitle {
@@ -205,7 +206,7 @@ img {
 	}
 }
 
-@include resolution(lg) {
+@include minW($lg) {
 
 	.h3,
 	.subtitle {

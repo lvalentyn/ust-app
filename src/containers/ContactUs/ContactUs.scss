@@ -19,7 +19,7 @@
 		}
 	}
 
-	@include resolution(to-sm) {
+	@include maxW($sm) {
 		width: calc(100% + 30px);
 		margin-left: -15px;
 
@@ -28,7 +28,7 @@
 		}
 	}
 
-	@include resolution(sm) {
+	@include minW($sm) {
 		&__box {
 			display: flex;
 			flex-direction: row-reverse;
@@ -43,7 +43,6 @@
 
 			&--bg {
 				@include adaptive-value(padding, 20, 40);
-				// @include adaptive-value(margin-right, 20, 160);
 			}
 		}
 	}

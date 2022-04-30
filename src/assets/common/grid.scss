@@ -1,0 +1,41 @@
+@import './mixins.scss';
+@import './vars.scss';
+
+@mixin gridsTo($media, $size) {
+	@include maxW($media) {
+		@for $i from 1 through 12 {
+			.grid__to-#{$size}_#{$i} {
+				max-width: calc(100% / 12 * #{$i});
+				width: calc(100% / 12 * #{$i});
+				min-width: calc(100% / 12 * #{$i});
+			}
+		}
+	}
+}
+
+@mixin grids($media, $size) {
+	@include minW($media) {
+		@for $i from 1 through 12 {
+			.grid__#{$size}_#{$i} {
+				max-width: calc(100% / 12 * #{$i});
+				width: calc(100% / 12 * #{$i});
+				min-width: calc(100% / 12 * #{$i});
+			}
+		}
+	}
+}
+
+// .grid__to-xxs_1
+@include gridsTo($xxs, xxs);
+@include gridsTo($xs, xs);
+@include gridsTo($sm, sm);
+@include gridsTo($md, md);
+@include gridsTo($xl, xl);
+@include gridsTo($lg, lg);
+// .grid__xxs_1
+@include grids($xxs, xxs);
+@include grids($xs, xs);
+@include grids($sm, sm);
+@include grids($md, md);
+@include grids($xl, xl);
+@include grids($lg, lg);

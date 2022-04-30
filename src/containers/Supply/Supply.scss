@@ -60,13 +60,13 @@
 		color: $supply-color-alt;
 	}
 
-	@include resolution(sm) {
+	@include minW($sm) {
 		&__box {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 
-	@include resolution(md) {
+	@include minW($md) {
 		&__logo {
 			margin: 0 0 30px;
 		}

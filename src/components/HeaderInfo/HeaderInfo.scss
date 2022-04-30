@@ -30,17 +30,17 @@
 		line-height: 2.2rem;
 	}
 
-	@include resolution(xxs) {
+	@include minW($xxs) {
 		&__wrapper {
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
-	@include resolution(to-lg) {
+	@include maxW($lg) {
 		background-color: $header-info-bg;
 	}
 
-	@include resolution(lg) {
+	@include minW($lg) {
 		margin-top: -300px;
 		padding-bottom: 112px;
 

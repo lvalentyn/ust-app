@@ -1,1 +1,150 @@
 @import './../../assets/common/vars.scss';
+
+.footer {
+	@include adaptive-value(padding-top, 40, 60);
+	@include adaptive-value(padding-bottom, 40, 60);
+	background-color: $footer-bg;
+
+	&__box {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__col {
+		color: $footer-color;
+
+		a {
+			color: $footer-color;
+		}
+
+		&--adress {
+			display: flex;
+			flex-direction: column;
+			width: calc(50% - 5px);
+
+			&:first-child {
+				margin-right: 10px;
+			}
+
+			.footer__link {
+				margin-bottom: 10px;
+
+				@include adaptive-value(font-size, 12, 16);
+				@include adaptive-value(line-height, 16, 22);
+				word-wrap: break-word;
+			}
+		}
+
+		&--menu {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			width: 100%;
+
+			.footer__link {
+				margin-bottom: 15px;
+				font-size: 16px;
+				line-height: 24px;
+			}
+		}
+
+		&--soc {
+			margin: 0 auto;
+			margin-bottom: 15px;
+		}
+
+		&--term {
+			width: 100%;
+
+			text-align: center;
+
+			&:hover {
+				color: $footer-term;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__title {
+		margin-bottom: 15px;
+
+		@include adaptive-value(font-size, 12, 16);
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	@include minW($xxs) {
+		&__col {
+			&--adress {
+				margin-bottom: 20px;
+
+				width: calc(50% - 10px);
+
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+
+			&--menu {
+				margin-bottom: 20px;
+				width: calc(50% - 10px);
+				text-align: left;
+			}
+
+			&--soc {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	@include minW($sm) {
+		&__col {
+			width: calc((100% / 5) - 20px);
+			margin: 0;
+			margin-right: 20px;
+
+			&--adress {
+				&:first-child {
+					margin-right: 20px;
+				}
+			}
+
+			&--menu {
+				max-width: 120px;
+			}
+
+			&--soc {
+				margin-right: 0;
+			}
+
+			&--term {
+				width: 100%;
+			}
+		}
+	}
+
+	@include minW($lg) {
+
+		&__col {
+			width: calc((100% / 5) - 40px);
+			margin: 0;
+			margin-right: 40px;
+
+			&--soc {
+				margin-right: 0;
+			}
+
+			&--adress {
+
+				&:first-child {
+					margin-right: 40px;
+				}
+			}
+
+			&--term {
+				width: 100%;
+			}
+		}
+	}
+}

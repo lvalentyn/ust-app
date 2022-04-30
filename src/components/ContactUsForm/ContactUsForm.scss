@@ -55,7 +55,7 @@
 		}
 	}
 
-	@include resolution(md) {
+	@include minW($md) {
 		&__btn-box {
 			display: flex;
 			flex-direction: row-reverse;
